@@ -18,13 +18,13 @@ variable "create_account_password_policy" {
 variable "max_password_age" {
   description = "The number of days that an user password is valid."
   type        = number
-  default     = 0
+  default     = 90
 }
 
 variable "minimum_password_length" {
   description = "Minimum length to require for user passwords"
   type        = number
-  default     = 8
+  default     = 14
 }
 
 variable "allow_users_to_change_password" {
@@ -42,7 +42,7 @@ variable "hard_expiry" {
 variable "password_reuse_prevention" {
   description = "The number of previous passwords that users are prevented from reusing"
   type        = number
-  default     = null
+  default     = 24
 }
 
 variable "require_lowercase_characters" {
